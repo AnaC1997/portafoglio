@@ -1,12 +1,15 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
+import AppHeader from "./components/AppHeader.vue"
+import AppContent from "./components/AppContent.vue"
+
 
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent
+		AppHeader,
+		AppContent
 	},
 	data() {
 		return {
@@ -14,17 +17,21 @@ export default {
 		}
 	},
 	mounted() {
-		this.doThings();
-
-		// axios.get("indirizzo").then(risultato => {
-		// 	console.log(risultato);
-		// }).catch(errore => {
-		// 	console.error(errore);
-		// });
+		// Aggiungi event listener a tutti i video
+		this.addVolumeChangeListeners();
 	},
 	methods: {
-		doThings() {
-			console.log("App.vue does things");
+		addVolumeChangeListeners() {
+			// Seleziona tutti i video
+			var videos = document.querySelectorAll("video");
+			// Itera su ciascun video e aggiungi l'event listener
+			videos.forEach(video => {
+				video.addEventListener("volumechange", () => {
+					if (video.volume !== 0) {
+						video.volume = 0;
+					}
+				});
+			});
 		}
 	}
 }
@@ -32,14 +39,37 @@ export default {
 
 <template>
 	<main>
-		<AppComponent />
+		<AppHeader />
+		<AppContent />
 
-		<button class="btn btn-primary">
-			<font-awesome-icon icon="fa-solid fa-home" class="me-1" />
-			<span>Primary button</span>
-		</button>
+		<div>
+			<H1>HTML CSS</H1>
+			<!-- Discord -->
+			<video id="discordVideo" muted width="320" height="240" controls disabled>
+				<source src="discord.mov">
+			</video>
+			<!-- Boolando -->
+			<video  id="boolandoVideo" muted width="320" height="240" controls disabled>
+				<source src="boolando.mov">
+			</video>
+			<!-- Dropbox -->
+			<video id="dropboxVideo" muted width="320" height="240" controls>
+				<source src="dropbox.mov">
+			</video>
+			<!-- Boolean -->
+			<video id="booleanVideo" muted width="320" height="240" controls>
+				<source src="boolean.mov">
+			</video>
+		</div>
+		<div>
+			qui javascrip vue
+		</div>
+		<div>
+			qui proggetti laravel
+		</div>
 	</main>
 </template>
+
 
 <style lang="scss">
 // importo il foglio di stile generale dell'applicazione, non-scoped
