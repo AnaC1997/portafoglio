@@ -49,20 +49,41 @@ export default {
 				<source src="discord.mov">
 			</video>
 			<!-- Boolando -->
-			<video  id="boolandoVideo" muted width="320" height="240" controls disabled>
+			<video id="boolandoVideo" muted width="320" height="240" controls disabled>
 				<source src="boolando.mov">
 			</video>
 			<!-- Dropbox -->
 			<video id="dropboxVideo" muted width="320" height="240" controls>
 				<source src="dropbox.mov">
 			</video>
-			<!-- Boolean -->
-			<video id="booleanVideo" muted width="320" height="240" controls>
-				<source src="boolean.mov">
+			<!-- Dropbox -->
+			<video id="freelencerVideo" muted width="320" height="240" controls>
+				<source src="freelencer.mov">
 			</video>
+			<!-- Boolean -->
+			<img src="shopify.png" alt="schermataShopify">
+
+			<!-- Dashboard-->
+			<img src="dashboard.png" alt="schermataDashboard">
+
 		</div>
 		<div>
 			qui javascrip vue
+			<!-- Biglietto Treno-->
+			<video id="freelencerVideo" muted width="320" height="240" controls>
+				<source src="bigliettoTreno.mov">
+			</video>
+
+			<!--Campominato-->
+			<img src="campominato.png" alt="#">
+
+			<!--Social Post-->
+			<img src="social.png" alt="#">
+
+			<!--Boolzapp-->
+			<img src="boolzapp.png" alt="#">
+
+
 		</div>
 		<div>
 			qui proggetti laravel
