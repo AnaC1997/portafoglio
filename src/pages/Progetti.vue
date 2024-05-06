@@ -36,7 +36,7 @@ export default {
         },
         {
           name: "Spotify",
-          src: "shopify.png",
+          src: "spotify.png",
           description: "Creazione statica della schermata iniziale di Spotify responsive, utilizzando HTML e CSS.",
           linkGit: "https://github.com/AnaC1997/html-css-spotifyweb"
         },
@@ -103,92 +103,130 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="col">
-      <div class="row">
-        <h1 class="text-center">I miei progetti</h1><br>
-        <p>Nel mio percorso fino ad ora, mi sono imbattuta in un mondo nuovo e pieno di sfide, ma che ogni volta ti
-          gratifica, perché ogni conoscenza acquisita è come un bastoncino in un gioco Jenga, dove ogni cosa che impari
-          ti aiuta a costruire il tuo sapere. In questo caso, il gioco non finisce mai, poiché ogni volta dobbiamo
-          cercare
-          di aggiornare la nostra conoscenza per avere sempre le migliori basi.</p>
-            <!--HTML CSS BOOTSTRAP-->
-        <p>All'inizio del mio percorso, ho sviluppato i seguenti siti statici utilizzando <strong
-            class="alert alert-danger" role="alert">HTML</strong>, <strong class="alert alert-warning"
-            role="alert">CSS</strong> e <strong class="alert alert-info" role="alert">Bootstrap</strong></p>
-        <div v-for="projectHtmlCss in projectsHtmlCss" :key="index" class="card" style="width: 18rem;">
-          <template v-if="projectHtmlCss.src.endsWith('.mov')">
-            <video controls>
-              <source :src="projectHtmlCss.src">
-            </video>
-          </template>
-          <template v-else>
-            <img :src="projectHtmlCss.src" alt="Immagine">
-          </template>
+  <div class="background">
+    <div class="container">
+      <div class="col">
+        <div class="row justify-content-center">
+          <h1 class="text-center fw-bold p-5">I miei progetti</h1><br>
+          <p class="pb-3">Nel mio percorso fino ad ora, mi sono imbattuta in un mondo nuovo e pieno di sfide, ma che
+            ogni volta ti
+            gratifica, perché ogni conoscenza acquisita è come un bastoncino in un gioco Jenga, dove ogni cosa che
+            impari
+            ti aiuta a costruire il tuo sapere. In questo caso, il gioco non finisce mai, poiché ogni volta dobbiamo
+            cercare
+            di aggiornare la nostra conoscenza per avere sempre le migliori basi.</p>
+          <!--HTML CSS BOOTSTRAP-->
+          <p class="pb-3">All'inizio del mio percorso, ho sviluppato i seguenti siti statici utilizzando <strong
+              class="colorBlue">HTML</strong>, <strong class="colorBlue">CSS</strong> e <strong
+              class="colorBlue">Bootstrap</strong></p>
+          <!--INIZIO CARD-->
+          <div v-for="projectHtmlCss in projectsHtmlCss" :key="index" class="card m-2" style="width: 40rem;">
+            <span v-if="projectHtmlCss.src.endsWith('.mov')" class="ratio" style="--bs-aspect-ratio: 50%;">
+              <video controls>
+                <source :src="projectHtmlCss.src">
+              </video>
+            </span>
+            <span v-else class="ratio" style="--bs-aspect-ratio: 50%;">
+              <img :src="projectHtmlCss.src" alt="Immagine" class="img-fluid">
+            </span>
 
-          <div class="card-body">
-            <h5 class="card-title">{{ projectHtmlCss.name }}</h5>
-            <p class="card-text">{{ projectHtmlCss.description }}</p>
+            <div class="card-body ">
+              <h5 class="card-title">{{ projectHtmlCss.name }}</h5>
+              <p class="card-text">{{ projectHtmlCss.description }}</p>
+              <p class="card-text pb-1"><a :href="projectHtmlCss.linkGit"
+                  class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link di
+                  GitHub</a></p>
+            </div>
           </div>
-          <div class="card-body">
-            <p><a :href="projectHtmlCss.linkGit"
-                class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link di
-                GitHub</a></p>
+
+          <!--JAVASCRIP VUE-->
+          <p class="pt-5 pb-3">Dopo aver imparato le basi di come gestire il design e la presentazione di una pagina
+            web, ho sviluppato i
+            seguenti progetti utilizzando anche <strong class="colorBlue">JavaScript</strong> con il suo
+            framework <strong class="colorBlue">Vue.js</strong> per dare dinamicità ai siti:
+          </p>
+          <!--INIZIO CARD-->
+          <div v-for="(projectJavascript, index) in projectsJavascript" :key="index" class="card m-2"
+            style="width: 40rem;">
+            <span v-if="projectJavascript.src.endsWith('.mov')" class="ratio" style="--bs-aspect-ratio: 50%;">
+              <video controls >
+                <source :src="projectJavascript.src">
+              </video>
+            </span>
+            <span v-else  class="ratio" style="--bs-aspect-ratio: 50%;">
+              <img :src="projectJavascript.src" alt="Immagine" class="img-fluid">
+            </span>
+
+            <div class="card-body">
+              <h5 class="card-title">{{ projectJavascript.name }}</h5>
+              <p class="card-text">{{ projectJavascript.description }}</p>
+            </div>
+            <div class="card-body">
+              <p><a :href="projectJavascript.linkGit"
+                  class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link di
+                  GitHub</a></p>
+            </div>
+          </div>
+
+
+          <!--PHP LARAVEL-->
+          <p class="pt-5 pb-3">Successivamente abbiamo iniziato a studiare la persistenza dei dati utilizzando <strong
+              class="colorBlue">MySQL</strong> e la funzionalità dei siti web utilizzando <strong
+              class="colorBlue">PHP</strong>, con <strong class="colorBlue">Laravel</strong> come framework.</p>
+          <!--INIZIO CARD-->
+          <div v-for="projectLaravel in projectsLaravel" :key="index" class="card m-2" style="width: 40rem;">
+            <span v-if="projectLaravel.src.endsWith('.mov')" class="ratio" style="--bs-aspect-ratio: 50%;">
+              <video controls>
+                <source :src="projectLaravel.src">
+              </video>
+            </span>
+            <span v-else>
+              <img :src="projectLaravel.src" alt="Immagine" class="ratio" style="--bs-aspect-ratio: 50%;">
+            </span>
+
+            <div class="card-body">
+              <h5 class="card-title">{{ projectLaravel.name }}</h5>
+              <p class="card-text">{{ projectLaravel.description }}</p>
+            </div>
+            <div class="card-body">
+              <p><a :href="projectLaravel.linkGit"
+                  class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link di
+                  GitHub</a>
+              </p>
+            </div>
           </div>
         </div>
-
-        <!--JAVASCRIP VUE-->
-        <p>Dopo aver imparato le basi di come gestire il design e la presentazione di una pagina web, ho sviluppato i seguenti progetti utilizzando anche <strong class="alert alert-success" role="alert">JavaScript</strong> con il suo framework <strong class="alert alert-primary" role="alert">Vue.js</strong> per dare dinamicità ai siti:</p>
-        <div v-for="projectJavascript in projectsJavascript" :key="index"  class="card" style="width: 18rem;">
-          <template v-if="projectJavascript.src.endsWith('.mov')">
-            <video controls>
-              <source :src="projectJavascript.src">
-            </video>
-          </template>
-          <template v-else>
-            <img :src="projectJavascript.src" alt="Immagine">
-          </template>
-
-          <div class="card-body">
-            <h5 class="card-title">{{ projectJavascript.name }}</h5>
-            <p class="card-text">{{ projectJavascript.description }}</p>
-          </div>
-          <div class="card-body">
-            <p><a :href="projectJavascript.linkGit"
-                class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link di
-                GitHub</a>
-            </p>
-          </div>
-        </div>
-
-         <!--PHP LARAVEL-->
-         <p>Successivamente abbiamo iniziato a studiare la persistenza dei dati utilizzando <strong class="alert alert-danger" role="alert">MySQL</strong> e la funzionalità dei siti web utilizzando <strong class="alert alert-primary" role="alert">PHP</strong>, con  <strong class="alert alert-warning" role="alert">Laravel</strong> come framework.</p>
-         <div v-for="projectLaravel in projectsLaravel" :key="index"  class="card" style="width: 18rem;">
-          <template v-if="projectLaravel.src.endsWith('.mov')">
-            <video controls>
-              <source :src="projectLaravel.src">
-            </video>
-          </template>
-          <template v-else>
-            <img :src="projectLaravel.src" alt="Immagine">
-          </template>
-
-          <div class="card-body">
-            <h5 class="card-title">{{ projectLaravel.name }}</h5>
-            <p class="card-text">{{ projectLaravel.description }}</p>
-          </div>
-          <div class="card-body">
-            <p><a :href="projectLaravel.linkGit"
-                class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link di
-                GitHub</a>
-            </p>
-          </div>
-        </div>
-
       </div>
-
     </div>
-
   </div>
 
 </template>
+
+<style scoped lang="scss">
+h1,
+h5,
+p,
+a {
+  color: white;
+}
+
+.colorBlue {
+  color: #0DC9EF;
+}
+
+
+.background {
+  background-color: black;
+  cursor: pointer;
+}
+
+.card {
+  background-color: rgb(51, 49, 49);
+
+}
+
+.card:hover {
+  background-color: rgb(105, 102, 102);
+
+}
+</style>
