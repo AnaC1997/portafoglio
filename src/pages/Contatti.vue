@@ -8,7 +8,7 @@ export default {
     <div class="backgrounImg">
         <div class="container d-flex flex-column h-75 w-100 justify-content-center">
             <h1 class="text-center text-white fw-bold p-2">I miei contatti</h1>
-            <p class="text-white h4  pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+            <p class="text-white h4 pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
                 hic quidem, impedit velit, accusantium
                 odio fugit aspernatur ad id nam quisquam inventore veniam accusamus, quos ut aliquam. Eligendi,
                 laboriosam et!</p>

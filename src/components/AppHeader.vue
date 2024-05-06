@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header class="sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary fw-bold">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
