@@ -13,14 +13,14 @@ export default {
                 odio fugit aspernatur ad id nam quisquam inventore veniam accusamus, quos ut aliquam. Eligendi,
                 laboriosam et!</p>
                 <div class="d-flex flex-column gap-3 mx-10">
-                    <Span class="text-white "><img src="iconaEmail.png" alt="Icona Email"> Email:
+                    <Span class="text-white "><img src="../assets/img/iconaEmail.png" alt="Icona Email"> Email:
                         anamariacorrea1997@gmail.com</Span>
-                    <span class="text-white"><img src="iconaTelefono.png" alt=""> Telefono: +39 328
+                    <span class="text-white"><img src="../assets/img/iconaTelefono.png" alt=""> Telefono: +39 328
                         2245828</span>
-                    <span class="text-white"><img src="iconaLinkedin.png" alt=""> <a
+                    <span class="text-white"><img src="../assets/img/iconaLinkedin.png" alt=""> <a
                             href="https://www.linkedin.com/in/ana-maria-correa-espinosa-953106114/">Profilo
                             Linkedin</a></span>
-                    <span class="text-white d"><img src="iconaGitHub.png" alt="https://github.com/AnaC1997"
+                    <span class="text-white d"><img src="../assets/img/iconaGitHub.png" alt="https://github.com/AnaC1997"
                             class="imgGitHub"> <a href="https://github.com/AnaC1997">Profile GitHub</a></span>
                 </div>
         </div>
