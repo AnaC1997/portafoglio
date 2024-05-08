@@ -11,7 +11,7 @@ export default {
                 <div class="row">
                     <h1 class="text-center text-white fw-bold pb-3 pt-5">Benvenuti, mi nome è Ana Maria.</h1><br>
             <span class="d-flex justify-content-center pb-4">
-                <img class="img-fluid rounded-circle" src="foto.png" alt="foto">
+                <img class="img-fluid rounded-circle" src="../assets/img/foto.png" alt="foto">
             </span>
        <p class="text-white h4  pb-4">Sono una persona curiosa del mondo che mi circonda, appassionata nella vita e desiderosa di conoscere. Da
                 piccola amavo trascorrere del tempo nella natura e giocare con i miei amici. Dopo aver completato il mio

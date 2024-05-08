@@ -97,8 +97,12 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+    getImagePath: function (src) {
+      return new URL(`../assets/img/${src}`, import.meta.url).href;
+    }
   }
-
 }
 </script>
 
@@ -123,11 +127,11 @@ export default {
           <div v-for="projectHtmlCss in projectsHtmlCss" :key="index" class="card m-2" style="width: 40rem;">
             <span v-if="projectHtmlCss.src.endsWith('.mov')" class="ratio" style="--bs-aspect-ratio: 50%;">
               <video controls>
-                <source :src="projectHtmlCss.src">
+                <source :src="getImagePath(projectHtmlCss.src)">
               </video>
             </span>
             <span v-else class="ratio" style="--bs-aspect-ratio: 50%;">
-              <img :src="projectHtmlCss.src" alt="Immagine" class="img-fluid">
+              <img :src="getImagePath(projectHtmlCss.src)" alt="Immagine" class="img-fluid">
             </span>
 
             <div class="card-body ">
@@ -149,12 +153,12 @@ export default {
           <div v-for="(projectJavascript, index) in projectsJavascript" :key="index" class="card m-2"
             style="width: 40rem;">
             <span v-if="projectJavascript.src.endsWith('.mov')" class="ratio" style="--bs-aspect-ratio: 50%;">
-              <video controls >
-                <source :src="projectJavascript.src">
+              <video controls>
+                <source :src="getImagePath(projectJavascript.src)">
               </video>
             </span>
-            <span v-else  class="ratio" style="--bs-aspect-ratio: 50%;">
-              <img :src="projectJavascript.src" alt="Immagine" class="img-fluid">
+            <span v-else class="ratio" style="--bs-aspect-ratio: 50%;">
+              <img :src="getImagePath(projectJavascript.src)" alt="Immagine" class="img-fluid">
             </span>
 
             <div class="card-body">
@@ -177,11 +181,11 @@ export default {
           <div v-for="projectLaravel in projectsLaravel" :key="index" class="card m-2" style="width: 40rem;">
             <span v-if="projectLaravel.src.endsWith('.mov')" class="ratio" style="--bs-aspect-ratio: 50%;">
               <video controls>
-                <source :src="projectLaravel.src">
+                <source :src="getImagePath(projectLaravel.src)">
               </video>
             </span>
             <span v-else>
-              <img :src="projectLaravel.src" alt="Immagine" class="ratio" style="--bs-aspect-ratio: 50%;">
+              <img :src="getImagePath(projectLaravel.src)" alt="Immagine" class="ratio" style="--bs-aspect-ratio: 50%;">
             </span>
 
             <div class="card-body">
