@@ -30,7 +30,7 @@ export default {
 .backgrounImg {
     max-width: 100vw;
     height: 93vh;
-    background-image: url("img3.png");
+    background-image: url("../assets/img/img3.png");
     cursor: pointer;
 }
 
