@@ -65,7 +65,7 @@ export default {
 <style scoped lang="scss">
 .backgrounImg {
     height: auto;
-    background-image: url("img3.png");
+    background-image: url("../assets/img/img3.png");
     cursor: pointer;
     overflow: auto;
 }
